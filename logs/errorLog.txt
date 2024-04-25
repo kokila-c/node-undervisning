@@ -1,0 +1,5 @@
+25.04.2024	12:32:54	2b8d9a66-43e4-4c0c-ac11-d79119d3109a	GET	/api/productss	404	Not found
+25.04.2024	12:38:43	d5d56067-2390-427c-88e9-bf11198d63d7	GET	/api/productss	404	Not found
+25.04.2024	12:43:19	c887fa11-a500-41d1-84f4-673096cac9bb	GET	/api/productss	404	Not found!
+25.04.2024	12:44:29	b0cb0a29-1226-4072-a5b4-1eb74541d449	PATCH	/api/products	undefined	ReqError is not defined
+25.04.2024	12:44:50	553787a6-4da9-44ff-9711-21fc4cd518aa	PATCH	/api/products	405	u can't do that.

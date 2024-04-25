@@ -1,0 +1,7 @@
+25.04.2024	12:32:04	7432759d-554b-4d99-950e-6e665613c897	GET	/api/products
+25.04.2024	12:32:29	72d7a60c-ad06-4d5e-802f-0b6e3e9eb2fd	GET	/api/productss
+25.04.2024	12:32:54	e341e55e-7515-48de-8fc9-c85f4eacfae6	GET	/api/productss
+25.04.2024	12:38:43	cac66238-0b17-49c7-a46f-e2a499519d56	GET	/api/productss
+25.04.2024	12:43:19	dc7d0540-fd3b-4f44-992d-561f66bc2302	GET	/api/productss
+25.04.2024	12:44:29	e1699e35-289c-4488-b9d2-25f5b7ad621d	PATCH	/api/products
+25.04.2024	12:44:50	529414d0-8c88-41bf-8b81-007a92ccef6b	PATCH	/api/products

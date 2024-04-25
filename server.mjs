@@ -1,7 +1,8 @@
 import express from "express";
 import productsRoute from "./api/products.mjs";
 import ordersRoute from "./api/orders.mjs";
-import eventLogger from "./eventLogger.mjs";
+import eventLogger from "./util/eventLogger.mjs";
+import { errorHandler, ReqError } from "./util/errorHandler.mjs";
 
 // Initialize express
 const app = express();
@@ -21,20 +22,11 @@ app.use("/api/orders", ordersRoute);
 
 // 404 catcher. Catches any request not picked up by our route handlers.
 app.all("*", (req, res, next) => {
-  const error = new Error("Not found");
-  error.status = 404;
-  next(error);
+  throw new ReqError(404, "Not found!");
 });
 
 // Error handler returns error in json format.
-app.use((err, req, res, next) => {
-  res.status(err.status || 500).json({
-    error: {
-      status: err.status || 500,
-      message: err.message,
-    },
-  });
-});
+app.use(errorHandler);
 
 // Server startup, listening for requests at provided port.
 app.listen(PORT, () => {
