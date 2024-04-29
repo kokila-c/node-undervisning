@@ -3,3 +3,8 @@
 25.04.2024	12:43:19	c887fa11-a500-41d1-84f4-673096cac9bb	GET	/api/productss	404	Not found!
 25.04.2024	12:44:29	b0cb0a29-1226-4072-a5b4-1eb74541d449	PATCH	/api/products	undefined	ReqError is not defined
 25.04.2024	12:44:50	553787a6-4da9-44ff-9711-21fc4cd518aa	PATCH	/api/products	405	u can't do that.
+29.04.2024	13:33:35	2b69c0db-07f2-4a40-b37f-807e690db190	POST	/api/products/51	405	Unsupported request method. Please refer to the API documentation
+29.04.2024	13:37:13	3ab582a4-a5b1-4b93-b2fc-fd23136106b1	GET	/api/products/51432423423	undefined	Cannot read properties of undefined (reading 'length')
+29.04.2024	13:38:29	fd7271a6-a3a5-41a8-923a-d24a8e815eb9	GET	/api/products/51432423423	404	Product with id 51432423423 doesn't exist.
+29.04.2024	13:50:42	12e1d568-bc5f-43c5-bd9a-d530cf726dfd	DELETE	/api/products/44432432423423	404	Product with id 44432432423423 doesn't exist.
+29.04.2024	13:51:10	56091d58-8bda-40a1-a33b-737cc012ee49	DELETE	/api/products/44432432423423	404	CANNOT DELETE: Product with id 44432432423423 doesn't exist.
