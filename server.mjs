@@ -1,6 +1,8 @@
 import express from "express";
 import productsRoute from "./api/products.mjs";
 import ordersRoute from "./api/orders.mjs";
+import signupRoute from "./api/signup.mjs";
+import loginRoute from "./api/login.mjs";
 import eventLogger from "./util/eventLogger.mjs";
 import { errorHandler, ReqError } from "./util/errorHandler.mjs";
 
@@ -22,6 +24,8 @@ app.use(express.static("public"));
 // Api routes. Uses external routers.
 app.use("/api/products", productsRoute);
 app.use("/api/orders", ordersRoute);
+app.use("/api/signup", signupRoute);
+app.use("/api/login", loginRoute);
 
 // 404 catcher. Catches any request not picked up by our route handlers.
 app.all("*", (req, res, next) => {

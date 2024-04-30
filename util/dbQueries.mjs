@@ -34,4 +34,32 @@ const deleteProduct = (id) => {
   deleteProductQuery.run(id);
 };
 
-export { getProducts, getCategory, addProduct, getProduct, deleteProduct };
+const updateProduct = (name, category, stock, price, id) => {
+  const updateProductQuery = db.prepare(
+    "UPDATE products SET name = ?, category = ?, stock = ?, price = ? WHERE id = ?"
+  );
+  updateProductQuery.run(name, category, stock, price, id);
+};
+
+const signupUser = (email, password) => {
+  const signupUserQuery = db.prepare(
+    "INSERT INTO users (email, password) VALUES(?, ?)"
+  );
+  signupUserQuery.run(email, password);
+};
+
+const loginUser = (email) => {
+  const loginUserQuery = db.prepare("SELECT * FROM users WHERE email = ?");
+  return loginUserQuery.get(email);
+};
+
+export {
+  getProducts,
+  getCategory,
+  addProduct,
+  getProduct,
+  deleteProduct,
+  updateProduct,
+  signupUser,
+  loginUser,
+};

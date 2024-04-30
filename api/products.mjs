@@ -7,6 +7,7 @@ import {
   addProduct,
   getProduct,
   deleteProduct,
+  updateProduct,
 } from "../util/dbQueries.mjs";
 
 router.all("/", (req, res) => {
@@ -35,11 +36,6 @@ router.all("/", (req, res) => {
       addedProduct: req.body,
     });
   } else {
-    // const error = new Error(
-    //   `${req.method} not supported on this endpoint. Please refer to the API documentation.`
-    // );
-    // error.status = 405;
-    // throw error;
     throw new ReqError(
       405,
       "Unsupported request method. Please refer to the API documentation"
@@ -74,6 +70,21 @@ router.all("/:productId", (req, res) => {
       );
     }
   } else if (req.method === "PUT") {
+    const { name, category, stock, price } = req.body;
+    const checkProduct = getProduct(productId);
+    if (checkProduct) {
+      updateProduct(name, category, stock, price, productId);
+      message = "Successfully updated product with id " + productId;
+      data = {
+        oldVersion: checkProduct,
+        newVersion: req.body,
+      };
+    } else {
+      throw new ReqError(
+        404,
+        `CANNOT UPDATE: Product with id ${productId} doesn't exist.`
+      );
+    }
   } else {
     throw new ReqError(
       405,
@@ -88,3 +99,5 @@ router.all("/:productId", (req, res) => {
 });
 
 export default router;
+
+// CRUD- Create, Read, Update, Delete
