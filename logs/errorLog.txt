@@ -14,3 +14,34 @@
 30.04.2024	13:30:15	39e82d09-b1a8-4322-8163-e1ed44f73171	PATCH	/api/signup	405	PATCH not supported on this endpoint.
 30.04.2024	13:48:44	006c6fb7-4ff7-45b3-bf17-e0037d194053	POST	/api/login	403	Wrong password
 30.04.2024	13:49:13	799ee487-706d-404a-9349-81efb18edb6e	POST	/api/login	403	Authentication failed
+07.05.2024	12:57:16	dea6f128-77cf-488f-b07f-c12710fe9a9d	POST	/api/signup	400	"email" must be a valid email
+07.05.2024	12:57:36	ee82f897-1fdb-4012-89cd-2bd73738b410	POST	/api/signup	400	"email" must be a valid email
+07.05.2024	12:57:43	8bb1060d-bcfa-4aa8-b739-259afe866902	POST	/api/signup	400	"email" must be a valid email
+07.05.2024	12:57:57	4e419d36-434a-460c-ab90-d98e2afbf80e	POST	/api/signup	400	"email" must be a valid email
+07.05.2024	12:58:05	8b48502e-5276-454b-a48f-9c90bcd2fd76	POST	/api/signup	403	UNIQUE constraint failed: users.email
+07.05.2024	12:58:34	38595517-2032-4dc5-880d-05a3c2129e52	POST	/api/signup	400	"password" length must be at least 7 characters long
+07.05.2024	12:58:50	a0e5bc49-e514-4a4a-a2f3-83421f7bee88	POST	/api/signup	400	"password" length must be less than or equal to 100 characters long
+07.05.2024	13:26:19	44eee947-6b58-4b51-86bb-75ccaa0703a6	POST	/api/products/	400	"price" must be greater than or equal to 0
+07.05.2024	13:28:34	3a729374-1efa-44fc-b7db-b23d76e4148b	POST	/api/products/	400	"stock" must be an integer
+07.05.2024	13:31:16	a5ee3d27-617b-41b3-9024-333575322dcb	POST	/api/products/	400	"price" must have no more than 2 decimal places
+07.05.2024	13:41:18	fbc110ce-4ba6-4858-bc1f-dae4e73872e3	POST	/api/signup	400	"password" should contain at least 2 special character
+07.05.2024	13:41:39	2f186418-cd64-4dbb-9a4f-7040bbbe4a4e	POST	/api/signup	400	"password" should contain at least 2 uppercase character
+07.05.2024	13:45:30	57c5b58e-102e-4d97-8655-a9f334e5325d	POST	/api/signup	400	
+07.05.2024	13:46:09	d7552c60-7001-4e4a-894b-f484041a97b7	POST	/api/signup	400	
+07.05.2024	13:46:47	caeef887-9653-4004-b556-ee0c462f4d72	POST	/api/signup	400	
+07.05.2024	13:48:06	d1ed72cd-8b6d-4cfb-a612-174f400c1f0a	POST	/api/signup	400	
+07.05.2024	13:49:26	f9bff05c-604c-4887-b42c-8adc0ce6674f	POST	/api/signup	400	
+07.05.2024	13:49:28	ff2fde0e-c63d-4d79-b399-0884c965014a	POST	/api/signup	400	
+07.05.2024	13:49:29	c0a1eca8-38cd-47d9-8a5d-c0c6731ae57a	POST	/api/signup	400	
+07.05.2024	13:49:29	986fd994-5457-4d2e-946f-66240d414999	POST	/api/signup	400	
+07.05.2024	13:50:53	22c604ce-b708-4e51-ad3a-e071b6a17858	POST	/api/signup	400	
+07.05.2024	13:50:54	4826ee42-8321-44f3-86ca-d7d6dac4f3e9	POST	/api/signup	400	
+07.05.2024	13:50:55	ac99ec6c-9676-4b3c-b777-d94846fb6d2a	POST	/api/signup	400	
+07.05.2024	13:50:55	0505284f-2d6a-4cfb-976a-95b467ba6c8c	POST	/api/signup	400	
+07.05.2024	13:50:55	68d93539-fb19-4d2b-80bc-eb98aeded5de	POST	/api/signup	400	
+07.05.2024	13:51:28	4ff448df-191e-4e22-b378-12262249c7a7	POST	/api/signup	400	undefined[object Object][object Object][object Object]
+07.05.2024	13:51:51	80be78da-9483-4d82-88ac-0d6143131097	POST	/api/signup	400	undefined"password" should contain at least 2 special character"password" should contain at least 2 uppercase character"password" should contain at least 2 numeric character
+07.05.2024	13:53:45	6e0ad59a-5474-49f3-85ab-a6cfecdc0e3e	POST	/api/signup	400	undefinedERROR: "password" should contain at least 2 special character ---ERROR: "password" should contain at least 2 uppercase character ---ERROR: "password" should contain at least 2 numeric character ---
+07.05.2024	13:54:23	72a30ec4-3d6c-452c-bafe-dc8d7e9ba4b3	POST	/api/signup	400	ERROR: "password" should contain at least 2 special character ---ERROR: "password" should contain at least 2 uppercase character ---ERROR: "password" should contain at least 2 numeric character ---
+07.05.2024	13:54:45	b3594cec-b57e-4b04-bbb5-75540260e8be	POST	/api/signup	400	ERROR: "password" should contain at least 2 special character ---ERROR: "password" should contain at least 2 numeric character ---
+07.05.2024	13:54:51	4277cfea-f915-4770-a9cf-c7c954b97e64	POST	/api/signup	400	ERROR: "password" should contain at least 2 numeric character ---

@@ -10,6 +10,7 @@ import {
   deleteProduct,
   updateProduct,
 } from "../database/dbQueries.mjs";
+import { validateProductData } from "../middleware/validateData.mjs";
 
 router.get("/", jwtValidator, (req, res) => {
   const { category } = req.query;
@@ -30,7 +31,7 @@ router.get("/", jwtValidator, (req, res) => {
   });
 });
 
-router.post("/", (req, res) => {
+router.post("/", validateProductData, (req, res) => {
   addProduct(req.body);
 
   res.status(201).json({
