@@ -25,7 +25,7 @@ router.post("/", async (req, res, next) => {
       const token = jwt.sign(payload, secret, { expiresIn: "1h" });
       res.status(200).json({ message: "Authentication successful", token });
     } else {
-      next(new ReqError(403, "Authentication failed"));
+      next(new ReqError(403, "Wrong password"));
     }
   } catch (e) {
     next(new ReqError(500, e.message));

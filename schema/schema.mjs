@@ -1,25 +1,26 @@
 import Joi from "joi";
 import { joiPasswordExtendCore } from "joi-password";
+
 const joiPassword = Joi.extend(joiPasswordExtendCore);
 
 const userSchema = Joi.object({
   email: Joi.string().email().required().min(5).max(100),
   password: joiPassword
     .string()
-    .minOfSpecialCharacters(2)
-    .minOfLowercase(2)
-    .minOfUppercase(2)
-    .minOfNumeric(2)
+    .minofSpecialCharacters(2)
+    .minofLowercase(2)
+    .minofUppercase(2)
+    .minofNumeric(2)
     .noWhiteSpaces()
     .onlyLatinCharacters()
-    .doesNotInclude(["password", "1234", "abcd"]),
+    .doesNotInclude(["password", "1234", ""]),
 });
 
-const productSchema = Joi.object({
+const orderSchema = Joi.object({
   name: Joi.string().min(3).max(100).required(),
-  category: Joi.string().min(3).max(50).required(),
-  stock: Joi.number().integer().min(0).max(10000),
-  price: Joi.number().precision(2).prefs({ convert: false }).min(0).required(),
+  category: Joi.string().min(3).max(100).required(),
+  stock: Joi.number().min(0).max(10000).precision(0),
+  price: Joi.number().min(0).precision(2).required(),
 });
 
-export { userSchema, productSchema };
+export { userSchema, orderSchema };
